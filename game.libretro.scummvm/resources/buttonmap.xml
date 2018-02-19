@@ -97,7 +97,7 @@
     <feature name="y" mapto="RETROK_y"/>
     <feature name="z" mapto="RETROK_z"/>
     <feature name="delete" mapto="RETROK_DELETE"/>
-    <feature name="tilde" mapto="176"/> <!-- TODO: Add ~ with ID 176 to libretro -->
+    <!-- "tilde" maps to 176, which has no RETROK value -->
     <!-- Numeric keypad -->
     <feature name="kp0" mapto="RETROK_KP0"/>
     <feature name="kp1" mapto="RETROK_KP1"/>
