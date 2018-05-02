@@ -12,15 +12,13 @@
 	<extension point="kodi.gameclient"
 			library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms></platforms>
-		<extensions>scummvm</extensions>
+		<extensions></extensions>
 		<supports_vfs>false</supports_vfs>
-		<supports_standalone>true</supports_standalone>
+		<supports_standalone>false</supports_standalone>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">ScummVM 2.0.0</summary>
-		<description lang="en_GB">ScummVM is a collection of game engine recreations. ScummVM emulates several systems, including the SCUMM system for LucasArts adventure games.
-
-Supported files: .scummvm</description>
+		<summary lang="en_GB">ScummVM</summary>
+		<description lang="en_GB">ScummVM is a collection of game engine recreations. ScummVM emulates several systems, including the SCUMM system for LucasArts adventure games.</description>
 		<license>GPLv2</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
