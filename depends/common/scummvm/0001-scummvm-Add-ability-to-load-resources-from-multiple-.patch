@@ -14,10 +14,10 @@ directories where engine-data or theme files are read from.
  4 files changed, 34 insertions(+), 1 deletion(-)
 
 diff --git a/backends/platform/libretro/libretro.cpp b/backends/platform/libretro/libretro.cpp
-index 8f8e9159a1..e7ad0d86d9 100644
+index b8323834..fce8f5d1 100644
 --- a/backends/platform/libretro/libretro.cpp
 +++ b/backends/platform/libretro/libretro.cpp
-@@ -277,6 +277,19 @@ bool retro_load_game(const struct retro_game_info *game)
+@@ -387,6 +387,19 @@ bool retro_load_game(const struct retro_game_info *game)
        retroSetSaveDir(".");
     }
  
@@ -38,7 +38,7 @@ index 8f8e9159a1..e7ad0d86d9 100644
     {
        mainThread = co_active();
 diff --git a/backends/platform/libretro/libretro.h b/backends/platform/libretro/libretro.h
-index 16c274a1a9..2ab79e5960 100755
+index 16c274a1..2ab79e59 100755
 --- a/backends/platform/libretro/libretro.h
 +++ b/backends/platform/libretro/libretro.h
 @@ -852,6 +852,19 @@ enum retro_mod
@@ -62,7 +62,7 @@ index 16c274a1a9..2ab79e5960 100755
  #define RETRO_MEMDESC_BIGENDIAN (1 << 1)   /* The memory area contains big endian data. Default is little endian. */
  #define RETRO_MEMDESC_ALIGN_2   (1 << 16)  /* All memory access in this area is aligned to their own size, or 2, whichever is smaller. */
 diff --git a/backends/platform/libretro/os.cpp b/backends/platform/libretro/os.cpp
-index 2a05ecd53b..1e68b026ef 100644
+index c37171e3..cf6608f4 100644
 --- a/backends/platform/libretro/os.cpp
 +++ b/backends/platform/libretro/os.cpp
 @@ -251,6 +251,7 @@ static INLINE void copyRectToSurface(uint8_t *pixels, int out_pitch, const uint8
@@ -73,7 +73,7 @@ index 2a05ecd53b..1e68b026ef 100644
  
  #ifdef FRONTEND_SUPPORTS_RGB565
  #define SURF_BPP 2
-@@ -674,7 +675,7 @@ class OSystem_RETRO : public EventsBaseBackend, public PaletteManager {
+@@ -725,7 +726,7 @@ class OSystem_RETRO : public EventsBaseBackend, public PaletteManager {
  
        virtual void addSysArchivesToSearchSet(Common::SearchSet &s, int priority = 0)
        {
@@ -82,7 +82,7 @@ index 2a05ecd53b..1e68b026ef 100644
        }
  
        virtual void getTimeAndDate(TimeDate &t) const
-@@ -1036,6 +1037,11 @@ void retroSetSaveDir(const char* aPath)
+@@ -1246,6 +1247,11 @@ void retroSetSaveDir(const char* aPath)
     s_saveDir = Common::String(aPath ? aPath : ".");
  }
  
@@ -95,7 +95,7 @@ index 2a05ecd53b..1e68b026ef 100644
  {
     ((OSystem_RETRO*)g_system)->processKeyEvent(down, keycode, character, key_modifiers);
 diff --git a/backends/platform/libretro/os.h b/backends/platform/libretro/os.h
-index ed540901b0..ea70dad7c4 100644
+index 05ffeed1..014b1f04 100644
 --- a/backends/platform/libretro/os.h
 +++ b/backends/platform/libretro/os.h
 @@ -50,6 +50,7 @@ void retroPostQuit();
