@@ -33,5 +33,9 @@ msgid "Gamepad Cursor Speed"
 msgstr ""
 
 msgctxt "#30004"
+msgid "Mouse Speed"
+msgstr ""
+
+msgctxt "#30005"
 msgid "Speed Hack (Restart)"
 msgstr ""
