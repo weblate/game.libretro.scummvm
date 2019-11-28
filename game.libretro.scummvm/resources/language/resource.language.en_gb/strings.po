@@ -21,7 +21,7 @@ msgid "Settings"
 msgstr ""
 
 msgctxt "#30001"
-msgid "Analog Deadzone (percent)"
+msgid "Analog Deadzone (Percent)"
 msgstr ""
 
 msgctxt "#30002"
