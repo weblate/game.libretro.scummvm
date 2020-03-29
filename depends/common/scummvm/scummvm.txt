@@ -1,1 +1,1 @@
-scummvm https://github.com/libretro/scummvm/archive/0c777c88c556e21acb9a0772790c7519acf499c6.zip
+scummvm https://github.com/libretro/scummvm/archive/440d5d37ed8b4e0f7d0e312b74cae1bf3506a8fd.zip
